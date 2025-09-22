@@ -1,10 +1,14 @@
-# Adaptive Distribution Alignment via Characteristic Function for Graph Domain  Adaptation
+# Learning Adaptive Distribution Alignment with Neural Characteristic Function for Graph Domain Adaptation
 
-This is the source code of "Adaptive Distribution Alignment via Characteristic Function for Graph Domain  Adaptation"
+This is the source code of "Learning Adaptive Distribution Alignment with Neural Characteristic Function for Graph Domain Adaptation"
 
 # Abstract
 
-Graph Domain Adaptation (GDA) aims to transfer knowledge from labeled source graphs to unlabeled target graphs, where the core challenge arises from cross-domain graph distribution shifts. While existing methods typically focus on isolated aspects of distribution misalignment, such as node attributes, degree distributions, or graph heterophily, they often overlook the interdependence of these multi-faceted shifts, leading to suboptimal adaptation. To bridge this gap, we propose a unified distribution matching framework that holistically quantifies and aligns composite graph shifts. Our key insight is that graph distributions can be uniquely characterized via neural characteristic functions, which inherently encapsulate joint feature-structure dependencies through Fourier-domain representations. By reformulating GDA as a minimax optimization problem, where a learnable discrepancy metric dynamically prioritizes dominant shifts, our framework achieves adaptive alignment without manual reweighting. Theoretical analysis and empirical evaluations demonstrate that our approach outperforms state-of-the-art methods in handling complex, coupled distribution shifts.
+Graph Domain Adaptation (GDA) transfers knowledge from labeled source graphs to unlabeled target graphs but is challenged by complex, multi-faceted distributional shifts. Existing methods attempt to reduce distributional shifts through heuristic alignment strategies tailored to specific graph elements (e.g., node attributes or structural statistics), which typically require manually designed graph filters to extract relevant features before alignment. However, such handcrafted approaches are inherently rigid: they rely on task-specific heuristics, and struggle when dominant discrepancies vary across transfers.
+To address these limitations,
+we propose ADAlign, an Adaptive Distribution Alignment framework for GDA. Unlike heuristic methods, ADAlign requires no manual specification of alignment criteria. It automatically identifies the most relevant discrepancies in each transfer and aligns them jointly, capturing the interplay between attributes, structures, and their dependencies. This makes ADAlign flexible, task-aware, and robust to diverse and dynamically evolving shifts.
+To enable this adaptivity, we introduce the Neural Spectral Discrepancy (NSD), a theoretically principled parametric distance that provides a unified view of cross-graph shifts. NSD leverages neural characteristic functions in the spectral domain to encode feature-structure dependencies of all orders, while a learnable frequency sampler adaptively emphasizes the most informative spectral components for each task within minmax paradigm.
+Extensive experiments on 10 datasets and 16 transfer tasks show that ADAlign not only outperforms state-of-the-art baselines but also achieves efficiency gains with lower memory usage and faster training.
 
 # Requirements
 
