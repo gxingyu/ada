@@ -12,7 +12,7 @@ Extensive experiments on 10 datasets and 16 transfer tasks show that ADAlign not
 
 # Model Architecture
 
-![image-20260204220201360](img\model.png)
+![image-20260204220201360](img/model.png)
 
 # Requirements
 
