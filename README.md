@@ -12,7 +12,7 @@ Extensive experiments on 10 datasets and 16 transfer tasks show that ADAlign not
 
 # Model Architecture
 
-![image-20260204220000516](C:\Users\86130\AppData\Roaming\Typora\typora-user-images\image-20260204220000516.png)
+![image-20260204220201360](C:\Users\86130\AppData\Roaming\Typora\typora-user-images\image-20260204220201360.png)
 
 # Requirements
 
