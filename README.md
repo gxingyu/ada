@@ -1,6 +1,6 @@
 # Learning Adaptive Distribution Alignment with Neural Characteristic Function for Graph Domain Adaptation
 
-This is the source code of "Learning Adaptive Distribution Alignment with Neural Characteristic Function for Graph Domain Adaptation"
+This repo is for source code of 2026 ICLR paper "Learning Adaptive Distribution Alignment with Neural Characteristic Function for Graph Domain Adaptation".
 
 # Abstract
 
@@ -9,6 +9,10 @@ To address these limitations,
 we propose ADAlign, an Adaptive Distribution Alignment framework for GDA. Unlike heuristic methods, ADAlign requires no manual specification of alignment criteria. It automatically identifies the most relevant discrepancies in each transfer and aligns them jointly, capturing the interplay between attributes, structures, and their dependencies. This makes ADAlign flexible, task-aware, and robust to diverse and dynamically evolving shifts.
 To enable this adaptivity, we introduce the Neural Spectral Discrepancy (NSD), a theoretically principled parametric distance that provides a unified view of cross-graph shifts. NSD leverages neural characteristic functions in the spectral domain to encode feature-structure dependencies of all orders, while a learnable frequency sampler adaptively emphasizes the most informative spectral components for each task within minmax paradigm.
 Extensive experiments on 10 datasets and 16 transfer tasks show that ADAlign not only outperforms state-of-the-art baselines but also achieves efficiency gains with lower memory usage and faster training.
+
+# Model Architecture
+
+![image-20260204220000516](C:\Users\86130\AppData\Roaming\Typora\typora-user-images\image-20260204220000516.png)
 
 # Requirements
 
@@ -54,3 +58,4 @@ ma_f1 = eval_macro_f1(labels, preds)
 print('micro-f1: ' + str(mi_f1))
 print('macro-f1: ' + str(ma_f1))
 ```
+
